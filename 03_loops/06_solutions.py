@@ -1,3 +1,5 @@
+# factorial program 
+
 n = int(input("Enter the value "))
 fact =1
 
