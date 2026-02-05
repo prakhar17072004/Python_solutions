@@ -1,19 +1,13 @@
-#prime number
-n = int(input("Provide the value :"))
+#prime number program is added
 
-is_prime=True
+n = int(input("Enter number: "))
 
-if n >1:
-    for i in range(2,n):
-        if(n%i)==0:
-            is_prime=False
-            break
-
-    if is_prime:
-        print("Number is prime")
-    else:
-        print("Not prime") 
+if n <= 1:
+    print("Not prime")
 else:
-    print(" Numberis not prime") 
-
-       
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            print("Not prime")
+            break
+    else:
+        print("Prime number")
