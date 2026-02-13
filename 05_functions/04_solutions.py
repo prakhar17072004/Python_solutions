@@ -5,4 +5,4 @@ def areaCircum(rad):
     return area ,circum
 
 a,c = areaCircum(4)
-print("area :",a,"circumference:",round(c,2))
+print("area :",round(a,2),"circumference:",round(c,2))
