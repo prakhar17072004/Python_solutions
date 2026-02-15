@@ -15,8 +15,8 @@ x=99
 # res = func2(1)
 # print(res)
 
-# def fun3():
-#     x=88
+def fun3():
+    x=88
 
-# fun3()
-# print(x)    
+fun3()
+print(x)    
