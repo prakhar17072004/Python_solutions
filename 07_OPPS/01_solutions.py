@@ -5,7 +5,8 @@ class Car:
         self.model= model
     def full_name(self):
         return f"{self.brand} {self.model}"
-
+    
+# inheritence mechanism
 class ElectriCar(Car):
     def __init__(self,brand ,model,battery_size):
         super().__init__(brand,model)
@@ -14,6 +15,7 @@ class ElectriCar(Car):
 
 my_tesla = ElectriCar("Tesla","Model123","545kwh")
 print(my_tesla.model)
+print(my_tesla.full_name())
 # my_car = Car("Toyata","Corolla") 
 # print(my_car.brand)
 # print(my_car.model)
