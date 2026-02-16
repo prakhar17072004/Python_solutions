@@ -6,9 +6,15 @@ class Car:
     def full_name(self):
         return f"{self.brand} {self.model}"
 
-      
+class ElectriCar(Car):
+    def __init__(self,brand ,model,battery_size):
+        super().__init__(brand,model)
+        self.battery_size=battery_size
 
-my_car = Car("Toyata","Corolla") 
-print(my_car.brand)
-print(my_car.model)
-print(my_car.full_name())
+
+my_tesla = ElectriCar("Tesla","Model123","545kwh")
+print(my_tesla.model)
+# my_car = Car("Toyata","Corolla") 
+# print(my_car.brand)
+# print(my_car.model)
+# print(my_car.full_name())
