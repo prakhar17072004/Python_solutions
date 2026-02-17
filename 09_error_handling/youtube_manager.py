@@ -31,6 +31,8 @@ def add_video(videos):
     time=input("Enter the video time:")
     videos.append({'name':name,'time':time})
     save_data_helper(videos)
+
+# Update the videos part    
 def update_video(videos):
     pass
 
