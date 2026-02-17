@@ -1,5 +1,6 @@
 import json
 
+# //load data part
 def load_data():
     try:
         with open('youtube.txt','r')as file:
