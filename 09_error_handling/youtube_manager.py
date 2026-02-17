@@ -40,6 +40,8 @@ def update_video(videos):
 # delete video part
 def delete_video(videos):
     pass
+
+# // main execution is started here
 def main():
     videos = load_data()
 
