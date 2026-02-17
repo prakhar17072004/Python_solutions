@@ -36,6 +36,8 @@ def add_video(videos):
 def update_video(videos):
     pass
 
+
+# delete video part
 def delete_video(videos):
     pass
 def main():
