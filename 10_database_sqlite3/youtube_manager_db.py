@@ -28,6 +28,7 @@ def delete_videos(videos):
 
 def main():
     while True:
+
         print("\nYoutube manger app with DB") 
         print("1.List Videos")
         print("2.Add Videos")
@@ -57,7 +58,7 @@ def main():
         else:
             print("Invalid choice ")      
 
-
+    conn.close()
 
 if __name__ == "__main__":
     main()
