@@ -51,7 +51,11 @@ def main():
         elif choice == '4':
             videos_id=input("Enter the video id for update :")
             
-            delete_videos(videos_id)    
+            delete_videos(videos_id) 
+        elif choice == '5':
+            break 
+        else:
+            print("Invalid choice ")      
 
 
 
