@@ -15,6 +15,13 @@ cursor.execute('''
 def list_videos(videos):
     pass
     
+def add_videos(videos):
+    pass
+
+def update_videos(videos):
+    pass
+
+
 
 def main():
     while True:
@@ -31,7 +38,12 @@ def main():
         elif choice == '2':
             name=input("Enter the videos name :")
             time= input("Enter the video time")
-            add_video(name,time)
+            add_videos(name,time)
+        elif choice == '3':
+            videos_id=input("Enter the video id for update :")
+            name=input("Enter the videos name :")
+            time= input("Enter the video time")
+            update_videos(videos_id,name,time)
 
 
 
