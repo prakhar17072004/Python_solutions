@@ -2,32 +2,38 @@ import sqlite3
 
 conn=sqlite3.connect('youtube_videos.db')
 
-cursor = conn.curser()
+cursor = conn.cursor()
 
 cursor.execute(''' 
-      CREATE TABLE IF NOT EXIST videos(
+      CREATE TABLE IF NOT EXISTS videos(
                id INTGER PRIMARY KEY,
                name TEXT NOT NULL,
                time TEXT NOT NULL 
                )
 ''')
 
-def list_videos(videos):
+def list_videos():
     cursor.execute("SELECT * FROM videos")
-    for row in cursor.fetchall();
+    for row in cursor.fetchall():
         print(row)
     
     
-def add_videos(videos):
-    
+def add_videos(name,time):
+    cursor.execute("INSERT INTO videos (name ,time) VALUES(?,?)",(name,time))
+    cursor.commit()
+
 
  
 
-def update_videos(videos):
-    pass
+def update_videos(video_id,new_name,new_time):
+    cursor.execute("UPDATE videos SET name =?,time=? where id=?",(new_name,new_time,video_id))
+    cursor.commit()
 
-def delete_videos(videos):
-    pass
+    
+
+def delete_videos(video_id):
+    cursor.execute("DELETE FROM videos  where id =?",(video_id,))
+    cursor.commit()
 
 
 
