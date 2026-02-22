@@ -13,10 +13,15 @@ cursor.execute('''
 ''')
 
 def list_videos(videos):
-    pass
+    cursor.execute("SELECT * FROM videos")
+    for row in cursor.fetchall();
+        print(row)
+    
     
 def add_videos(videos):
-    pass
+    
+
+ 
 
 def update_videos(videos):
     pass
