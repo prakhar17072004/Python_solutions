@@ -6,7 +6,7 @@ cursor = conn.cursor()
 
 cursor.execute(''' 
       CREATE TABLE IF NOT EXISTS videos(
-               id INTGER PRIMARY KEY,
+               id INTEGER PRIMARY KEY,
                name TEXT NOT NULL,
                time TEXT NOT NULL 
                )
@@ -20,20 +20,20 @@ def list_videos():
     
 def add_videos(name,time):
     cursor.execute("INSERT INTO videos (name ,time) VALUES(?,?)",(name,time))
-    cursor.commit()
+    conn.commit()
 
 
  
 
 def update_videos(video_id,new_name,new_time):
     cursor.execute("UPDATE videos SET name =?,time=? where id=?",(new_name,new_time,video_id))
-    cursor.commit()
+    conn.commit()
 
     
 
 def delete_videos(video_id):
     cursor.execute("DELETE FROM videos  where id =?",(video_id,))
-    cursor.commit()
+    conn.commit()
 
 
 
