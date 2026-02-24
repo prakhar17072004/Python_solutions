@@ -5,14 +5,15 @@ def fetch_random_user_freeapi():
     response=requests.get(url)
     data= response.json()
 
-    if data ["Success"] and "data" in data:
+    if data["success"] and "data" in data:
         user_data = data["data"]
         username = user_data["login"]["username"]
         country = user_data["location"]["country"]
-        return username , country
+        return username,country
     else:
         raise Exception("failed to fetch user data")
-
+        
+# // main fuction
 def main():
     try:
         username , country= fetch_random_user_freeapi()
